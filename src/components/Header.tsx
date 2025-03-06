@@ -4,8 +4,10 @@ import LocationInput from "@/components/LocationInput";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import soupImage from "@/assets/soup-image.png"
 
 interface HeaderProps {
   q?: string;
@@ -28,11 +30,20 @@ export default function Header({ q, location }: HeaderProps) {
 
   return (
     <header className="bg-primary py-6">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">       
+
         <div className="flex flex-col items-center gap-4">
-          <Link href="/">
-            <span className="text-3xl font-bold text-primary-foreground">
-              Restaurant Finder
+          <Link href="/" className=" flex items-end justify-center">
+            <div className=" relative w-24 h-20 ">
+              <Image
+                src={soupImage}
+                alt="Restaurant Finder"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <span className=" text-3xl font-bold text-primary-foreground">
+              Your Culinary Compass
             </span>
           </Link>
           <form

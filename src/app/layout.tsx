@@ -8,8 +8,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Restaurant Finder",
-  description: "Find the best restaurants near you",
+  title: "Culinary Compass",
+  description: "Discover top dining spots in your area",
 };
 
 export default function RootLayout({
